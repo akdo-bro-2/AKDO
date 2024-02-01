@@ -19,11 +19,26 @@
         p {
             text-align: center;
         }
+        
+        .button {
+            cursor: pointer;
+        }
     </style>
+    <script src="spin.js"></script>
+    <script>
+        function spinImage() {
+            var spinner = new Spinner().spin();
+            document.getElementById('image').appendChild(spinner.el);
+            
+            // Add your code here to perform the desired action when the button is clicked
+        }
+    </script>
 </head>
 <body>
     <h1>Welcome</h1>
     <p>I have no clue what I am doing</p>
-    <img src="https://blooket.s3.us-east-2.amazonaws.com/blooks/breakfast/breakfastCombo.svg" alt="Image" width="200" height="200">
+    <div id="image" class="button" onclick="spinImage()">
+        <img src="https://blooket.s3.us-east-2.amazonaws.com/blooks/breakfast/breakfastCombo.svg" alt="Image" width="200" height="200">
+    </div>
 </body>
 </html>
